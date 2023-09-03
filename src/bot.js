@@ -17,7 +17,12 @@ mongoConnect(); // connect mongodb database
 
 const bot = new Telegraf(process.env.BOT_API_KEY);
 // creating a scene to store the current conversation and exit the scene when the user presses the cancel button
-const gameScene = new Scenes.BaseScene('gameScene');
+const gameScene = new Scenes.WizardScene('gameScene',
+  (ctx) => {
+    ctx.reply('What is your range?')
+    ctx.wizard.next()
+  }
+);
 const createRangeScene = new Scenes.WizardScene('createRangeScene');
 // const createGuessScene = new Scenes.WizardScene('createGuessScene',
   
