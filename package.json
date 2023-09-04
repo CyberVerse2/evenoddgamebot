@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bot.js",
     "watch": "nodemon src/bot.js",
-    "prod": "pm2 start src/bot.js --exp-backoff-restart-delay=100",
+    "prod": "pm2 start src/bot.js --watch --exp-backoff-restart-delay=100",
     "scene": "nodemon src/newbot.js",
     "build": "webpack --entry ./src/bot.js -o dist"
   },
