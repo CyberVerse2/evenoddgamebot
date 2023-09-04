@@ -339,4 +339,13 @@ bot.command('leaderboard', async (ctx) => {
   return ctx.reply('coming soon');
 });
 
-bot.launch();
+bot
+  .launch({
+    webhook: {
+      domain: 'https://evenoddgamebot.onrender.com',
+      port: 10000
+    }
+  })
+  .then(() => {
+    console.info(`The bot ${bot.botInfo.username} is running on server`);
+  });
