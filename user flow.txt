@@ -8,3 +8,6 @@ things to store in db
 chosen number
 guesses made by game creator and game
 outcome of each round
+
+if a person tries to create a new game when inScene is true, it returns
+an error, but if a person tries to create a new game when a scene is undefined(hasn't b)
